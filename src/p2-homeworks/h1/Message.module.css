@@ -1,3 +1,49 @@
-.message {
+.wrapperMessage {
+    display: flex;
+}
 
+.message {
+    border-radius: 12px;
+    background: rgba(175, 255, 234, 0.83);
+    position: relative;
+    margin: 5px;
+}
+
+.message {
+    border-bottom-left-radius: 0;
+}
+
+.message::after {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    bottom: 0;
+}
+
+.message::after {
+    left: 0;
+    transform: translateX(-100%);
+    background: radial-gradient(circle at 0 0, transparent, transparent 72%, rgba(175, 255, 234, 0.83) 72%);
+}
+
+.avatar {
+    height: 60px;
+    border-radius: 50px;
+}
+
+.fromUser {
+    margin-left: 5px;
+    color: blueviolet;
+    font-weight: bolder;
+}
+
+.messageText {
+    margin-left: 5px;
+}
+
+.time {
+    margin-left: 5px;
+    font-size: small;
+    color: gray;
 }
