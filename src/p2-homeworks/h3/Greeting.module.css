@@ -1,7 +1,43 @@
-.someClass {
-
+.errorText {
+    color: red;
 }
 
-.error {
-    border: 1px solid red;
+input.error {
+    outline: none;
+    border-bottom: 1px solid red;
+}
+
+input {
+    font-size: 16px;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+input.notError:focus {
+    outline: none;
+    border-bottom: 1px solid #39c;
+}
+
+button {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    width: 60px;
+    border-radius: 3px;
+    background: #75b7ff;
+    box-shadow: 0 -3px #61a8ff inset;
+    transition: 0.2s;
+    margin: 5px;
+    /*margin-left: 180px;*/
+}
+
+button:hover {
+    background: #61a8ff;
+}
+
+button:active {
+    background: #499cff;
+    box-shadow: 0 3px #499cff inset;
 }
