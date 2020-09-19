@@ -1,7 +1,10 @@
 .checkbox {
-
+    width: 10px;
+    height: 15px;
+    transform: scale(1.8);
+    cursor: pointer;
 }
 
 .spanClassName {
-
+    font-family: "Comic Sans MS";
 }

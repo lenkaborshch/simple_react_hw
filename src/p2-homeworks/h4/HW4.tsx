@@ -12,6 +12,7 @@ function HW4() {
             alert("введите текст...");
         } else {
             alert(text); // если нет ошибки показать текст
+            setText('');
         }
     }
 
@@ -30,7 +31,7 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // className={s.blue} // проверьте, рабоет ли смешивание классов
+                    /*className={s.blue}*/ // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*should work (должно работать)*/}
@@ -38,7 +39,7 @@ function HW4() {
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    Delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
                 {/*should work (должно работать)*/}
@@ -46,7 +47,7 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    Some text {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}

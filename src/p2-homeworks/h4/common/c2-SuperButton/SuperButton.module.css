@@ -1,7 +1,13 @@
-.default {
+button {
+    margin: 5px;
+    width: 75px;
+    font-weight: bold;
+}
 
+.default {
+    background-color: #ff8bad;
 }
 
 .red {
-    background: red;
+    background-color: rgba(255, 10, 17, 0.8);
 }

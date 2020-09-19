@@ -12,15 +12,6 @@ type AffairsPropsType = { // need to fix any
 function Affairs(props: AffairsPropsType) {
 
     const mappedAffairs = props.data.map(a => {
-        const selectColorForTask = () => {
-            if (a.priority === 'high') {
-                return 'blue';
-            } else if (a.priority === 'middle') {
-                return 'green';
-            } else if (a.priority === 'low') {
-                return 'yellow';
-            }
-        }
         return (
                 <Affair // should work
                     key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
