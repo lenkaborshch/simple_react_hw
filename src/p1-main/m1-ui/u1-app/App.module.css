@@ -1,3 +1,19 @@
-.App {
+.siteContainer {
+    text-align: center;
+}
 
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #f50057;
+}
+
+.imageNotFound {
+    height: 400px;
+    border: 2px solid black;
 }
