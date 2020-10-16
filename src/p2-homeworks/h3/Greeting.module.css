@@ -27,7 +27,6 @@ button {
     width: 60px;
     border-radius: 3px;
     background: #75b7ff;
-    box-shadow: 0 -3px #61a8ff inset;
     transition: 0.2s;
     margin: 5px;
     /*margin-left: 180px;*/
@@ -39,5 +38,4 @@ button:hover {
 
 button:active {
     background: #499cff;
-    box-shadow: 0 3px #499cff inset;
 }

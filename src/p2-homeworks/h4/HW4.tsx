@@ -1,6 +1,5 @@
 import React, {ChangeEvent, useState} from "react";
 import SuperInputText from "./common/c1-SuperInputText/SuperInputText";
-import s from "./HW4.module.css";
 import SuperButton from "./common/c2-SuperButton/SuperButton";
 import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 
@@ -24,34 +23,39 @@ function HW4() {
             <hr/>
             homeworks 4
 
-            <div className={s.column}>
+            <div>
                 {/*should work (должно работать)*/}
-                <SuperInputText
-                    value={text}
-                    onChangeText={setText}
-                    onEnter={showAlert}
-                    error={error}
-                    /*className={s.blue}*/ // проверьте, рабоет ли смешивание классов
-                />
-
+                <div>
+                    <SuperInputText
+                        value={text}
+                        onChangeText={setText}
+                        onEnter={showAlert}
+                        error={error}
+                        /*className={s.blue}*/ // проверьте, рабоет ли смешивание классов
+                    />
+                </div>
                 {/*should work (должно работать)*/}
-                <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
-                    onClick={showAlert}
-                >
-                    Delete {/*// название кнопки попадёт в children*/}
-                </SuperButton>
-
-                {/*should work (должно работать)*/}
-                <SuperCheckbox
-                    checked={checked}
-                    onChangeChecked={setChecked}
-                >
-                    Some text {/*// этот текст попадёт в children*/}
-                </SuperCheckbox>
-
-                {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <div>
+                    <SuperButton
+                        red // пропсу с булевым значением не обязательно указывать true
+                        onClick={showAlert}
+                    >
+                        Delete {/*// название кнопки попадёт в children*/}
+                    </SuperButton>
+                </div>
+                <div>
+                    {/*should work (должно работать)*/}
+                    <SuperCheckbox
+                        checked={checked}
+                        onChangeChecked={setChecked}
+                    >
+                        Some text {/*// этот текст попадёт в children*/}
+                    </SuperCheckbox>
+                </div>
+                <div>
+                    {/*// onChange тоже должен работать*/}
+                    <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                </div>
             </div>
 
             <hr/>

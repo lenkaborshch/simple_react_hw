@@ -16,17 +16,19 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import {Routes} from './Routes';
 import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAlt';
+import {v1} from "uuid";
 
 type NavbarItemsType = {
+    id: string
     title: string
     path: string
     progress?: string
 }
 
 const navbarItems: Array<NavbarItemsType> = [
-    {title: 'Pre-Junior', path: '/pre-junior', progress: 'BatteryCharging20Icon'},
-    {title: 'Junior', path: '/junior'},
-    {title: 'Strong-Junior', path: '/strong-junior'}
+    {id: v1(), title: 'Pre-Junior', path: '/pre-junior', progress: 'BatteryCharging20Icon'},
+    {id: v1(), title: 'Junior', path: '/junior'},
+    {id: v1(), title: 'Strong-Junior', path: '/strong-junior'}
 ]
 
 const drawerWidth = 240;
@@ -160,12 +162,14 @@ export function Header() {
                 </div>
                 <List>
                     {navbarItems.map((item) => (
-                        <ListItem button key={item.title}>
-                            <ListItemIcon>
-                                <SentimentSatisfiedAltIcon color='secondary'/>
-                            </ListItemIcon>
-                            <NavLink to={item.path} className={classes.link} activeClassName={classes.activeLink}><ListItemText primary={item.title}/></NavLink>
-                        </ListItem>
+                        <NavLink key={item.id} to={item.path} className={classes.link} activeClassName={classes.activeLink}>
+                            <ListItem button key={item.title}>
+                                <ListItemIcon>
+                                    <SentimentSatisfiedAltIcon color='secondary'/>
+                                </ListItemIcon>
+                                <ListItemText primary={item.title}/>
+                            </ListItem>
+                        </NavLink>
                     ))}
                 </List>
             </Drawer>
