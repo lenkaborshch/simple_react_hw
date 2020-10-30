@@ -1,0 +1,11 @@
+.editableSpanStyle {
+    font-size: large;
+    border-bottom: 2px solid gray;
+    color: gray;
+}
+
+.symbolSpanStyle {
+    color: black;
+    font-size: 25px;
+    padding-right: 5px;
+}

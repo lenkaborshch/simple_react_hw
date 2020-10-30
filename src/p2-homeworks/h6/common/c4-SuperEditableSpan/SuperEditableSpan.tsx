@@ -1,5 +1,6 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from 'react';
 import SuperInputText from '../../../h4/common/c1-SuperInputText/SuperInputText';
+import style from './SuperEditableSpan.module.css';
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -45,18 +46,6 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
         onDoubleClick && onDoubleClick(e);
     };
-
-    const editableSpanStyle = {
-        fontSize: 'large',
-        borderBottom: '2px solid gray',
-        color: 'gray'
-    }
-    const symbolSpanStyle = {
-        color: 'black',
-        fontSize: '25px',
-        paddingRight: '5px'
-    }
-
     return (
         <>
             {editMode
@@ -71,11 +60,11 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                 ) : (
                     <span
                         onDoubleClick={onDoubleClickCallBack}
-                        style={editableSpanStyle}
+                        className={style.editableSpanStyle}
 
                         {...restSpanProps}
                     >
-                        <span style={symbolSpanStyle}>&#9998;</span>
+                        <span className={style.symbolSpanStyle}>&#9998;</span>
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
                         {children || restProps.value}
                     </span>
