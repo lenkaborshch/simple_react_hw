@@ -5,8 +5,6 @@ import HW3 from '../../h3/HW3'
 import HW4 from '../../h4/HW4'
 import HW6 from '../../h6/HW6'
 import style from './PreJunior.module.css'
-import HW7 from '../../h7/HW7'
-import HW8 from '../../h8/HW8'
 
 export function PreJunior() {
     return (
@@ -16,8 +14,6 @@ export function PreJunior() {
             <HW3/>
             <HW4/>
             <HW6/>
-            <HW7/>
-            <HW8/>
         </div>
     )
 }
