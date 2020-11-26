@@ -20,9 +20,9 @@ function HW8() {
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(people, sortPeople('up')))
-    const sortDown = () => setPeople(homeWorkReducer(people, sortPeople('down')))
-    const check = () => setPeople(homeWorkReducer(people, checkPeople(18)))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, sortPeople('up')))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, sortPeople('down')))
+    const check = () => setPeople(homeWorkReducer(initialPeople, checkPeople(18)))
 
     return (
         <div>
